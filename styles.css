@@ -593,7 +593,6 @@ input:focus, textarea:focus {
 .footer-col a:hover { color: #fff; }
 .footer-logo-img { height: 64px; width: auto; align-self: flex-start; margin-bottom: 4px; }
 .footer-location { margin: 0; font-size: 0.85rem; }
-.footer-whatsapp { align-self: flex-start; margin-top: 8px; padding: 10px 20px; font-size: 0.85rem; }
 .footer-contact p { margin: 0; }
 .footer-social { display: flex; gap: 10px; margin-top: 14px; }
 .footer-social a {
@@ -607,6 +606,8 @@ input:focus, textarea:focus {
   justify-content: center;
 }
 .footer-social a:hover { background: rgba(255, 255, 255, 0.2); }
+.footer-social-whatsapp { background: var(--accent); }
+.footer-social-whatsapp:hover { background: var(--accent-dark); }
 .footer-partners {
   padding: 24px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
