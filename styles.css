@@ -568,7 +568,11 @@ input:focus, textarea:focus {
 .form-hint-privacy { margin-top: 6px; }
 
 /* Footer */
-.site-footer { background: #071f47; color: rgba(255, 255, 255, 0.78); padding: 44px 0 0; }
+.site-footer {
+  background: linear-gradient(0deg, rgba(4, 14, 36, 0.55), rgba(4, 14, 36, 0.55)), url('assets/footer/footer-bg.jpg') center / cover no-repeat;
+  color: rgba(255, 255, 255, 0.78);
+  padding: 44px 0 0;
+}
 .footer-grid {
   display: grid;
   grid-template-columns: 1.3fr 1fr 1fr 1fr;
