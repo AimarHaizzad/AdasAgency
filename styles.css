@@ -220,16 +220,14 @@ p { margin: 0 0 12px; color: var(--muted); }
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
+  align-items: center;
+  gap: 36px;
 }
-.badge {
-  background: var(--blue-100);
-  border: 1px solid var(--border);
-  color: var(--blue-900);
-  font-weight: 700;
-  font-size: 0.85rem;
-  padding: 8px 16px;
-  border-radius: 999px;
+.partner-logo {
+  height: 52px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
 }
 
 /* Products */
