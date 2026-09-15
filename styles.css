@@ -190,17 +190,6 @@ p { margin: 0 0 12px; color: var(--muted); }
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 20px 40px rgba(3, 20, 51, 0.35);
 }
-.hero-chip {
-  position: absolute;
-  background: #fff;
-  color: var(--blue-900);
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 8px 14px;
-  border-radius: 999px;
-  box-shadow: var(--shadow);
-}
-.hero-chip-1 { top: -10px; left: 10px; }
 
 .hero-mascot-col {
   display: flex;
@@ -672,7 +661,6 @@ input:focus, textarea:focus {
   .quotation-inner { grid-template-columns: 1fr; padding: 24px; }
   .quotation-form { grid-template-columns: 1fr; }
   .nav { order: 3; width: 100%; justify-content: center; gap: 16px; flex-wrap: wrap; }
-  .hero-chip { display: none; }
   .hero-visual { flex-direction: column; align-items: center; gap: 14px; }
   .hero-photo-wrap { max-width: 420px; }
   .hero-mascot-col { margin-bottom: 0; }
