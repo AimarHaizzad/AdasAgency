@@ -571,8 +571,6 @@ input:focus, textarea:focus {
   border-color: var(--blue-600);
   box-shadow: 0 0 0 3px rgba(21, 111, 224, 0.15);
 }
-.form-hint { font-size: 0.8rem; color: var(--muted); margin: 10px 0 0; text-align: center; }
-.form-hint-privacy { margin-top: 6px; }
 
 /* Footer */
 .site-footer {
