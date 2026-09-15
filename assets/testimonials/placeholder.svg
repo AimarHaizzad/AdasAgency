@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <rect width="400" height="500" fill="#eef3fa"/>
+  <rect x="1" y="1" width="398" height="498" fill="none" stroke="#c7d2e0" stroke-width="2" stroke-dasharray="10 8"/>
+  <g transform="translate(200,215)" fill="none" stroke="#9aa9c0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-45" y="-28" width="90" height="66" rx="8"/>
+    <circle cx="0" cy="6" r="20"/>
+    <path d="M-18 -28 L-10 -42 L10 -42 L18 -28"/>
+  </g>
+  <text x="200" y="330" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#5b6c85" text-anchor="middle">Tambah Gambar</text>
+  <text x="200" y="358" font-family="Arial, sans-serif" font-size="14" fill="#8a97ab" text-anchor="middle">testimoni-*.jpg</text>
+</svg>
