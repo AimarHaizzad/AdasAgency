@@ -179,19 +179,18 @@ p { margin: 0 0 12px; color: var(--muted); }
 }
 .hero-trust li::before { content: "✓ "; color: #9be6b8; }
 
-.hero-visual { position: relative; flex: 0 1 300px; display: flex; justify-content: center; min-width: 0; }
-.hero-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(6px);
-  color: #fff;
+.hero-visual { position: relative; flex: 0 1 380px; display: flex; justify-content: center; min-width: 0; }
+.hero-shop-photo {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: left center;
   border-radius: var(--radius);
-  padding: 32px;
-  max-width: 280px;
-  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 20px 40px rgba(3, 20, 51, 0.35);
 }
-.hero-card svg { color: #9be6b8; margin-bottom: 14px; }
-.hero-card p { color: rgba(255, 255, 255, 0.9); margin: 0; font-weight: 600; }
 .hero-chip {
   position: absolute;
   background: #fff;
