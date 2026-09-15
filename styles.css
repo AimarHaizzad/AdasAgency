@@ -445,8 +445,19 @@ p { margin: 0 0 12px; color: var(--muted); }
 }
 .location-icon { flex-shrink: 0; font-size: 1.1rem; }
 .location-details .btn { align-self: flex-start; }
+.location-media { display: flex; flex-direction: column; gap: 16px; }
+.location-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: left center;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+}
 .location-map {
-  min-height: 280px;
+  min-height: 220px;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
