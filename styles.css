@@ -111,25 +111,8 @@ p { margin: 0 0 12px; color: var(--muted); }
   padding-bottom: 14px;
   flex-wrap: wrap;
 }
-.logo {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-.logo-mark {
-  font-weight: 800;
-  font-size: 1.25rem;
-  letter-spacing: 0.5px;
-  color: var(--blue-900);
-}
-.logo-mark-accent { color: var(--blue-600); margin-left: 6px; }
-.logo-tagline {
-  font-size: 0.68rem;
-  font-weight: 600;
-  color: var(--muted);
-  letter-spacing: 0.4px;
-  margin-top: 2px;
-}
+.logo { display: flex; align-items: center; }
+.logo-img { display: block; height: 44px; width: auto; }
 .nav {
   display: flex;
   gap: 22px;
@@ -468,7 +451,7 @@ input:focus, textarea:focus {
 .footer-col h4 { color: #fff; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
 .footer-col a { text-decoration: none; color: rgba(255, 255, 255, 0.75); }
 .footer-col a:hover { color: #fff; }
-.footer-logo { font-weight: 800; color: #fff; font-size: 1.05rem; letter-spacing: 0.5px; margin: 0; }
+.footer-logo-img { height: 40px; width: auto; margin-bottom: 4px; }
 .footer-location { margin: 0; font-size: 0.85rem; }
 .footer-whatsapp { align-self: flex-start; margin-top: 8px; padding: 10px 20px; font-size: 0.85rem; }
 .footer-contact p { margin: 0; }
