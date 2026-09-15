@@ -365,20 +365,6 @@ p { margin: 0 0 12px; color: var(--muted); }
   color: var(--muted);
   text-align: center;
 }
-.testimonial-hint {
-  text-align: center;
-  font-size: 0.8rem;
-  color: var(--muted);
-  max-width: 620px;
-  margin: 22px auto 0;
-}
-.testimonial-hint code {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 1px 6px;
-  font-size: 0.78rem;
-}
 
 /* FAQ */
 .faq { padding: 56px 0; }
