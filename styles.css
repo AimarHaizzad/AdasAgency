@@ -293,7 +293,18 @@ p { margin: 0 0 12px; color: var(--muted); }
   border-radius: var(--radius);
   padding: 24px 20px;
 }
-.why-icon { font-size: 1.7rem; margin-bottom: 10px; }
+.why-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  box-shadow: 0 6px 14px rgba(3, 20, 51, 0.2);
+}
+.why-icon img { width: 34px; height: 34px; object-fit: contain; }
 .why-item h3 { color: #fff; font-size: 1.02rem; }
 .why-item p { color: rgba(255, 255, 255, 0.72); margin: 0; font-size: 0.9rem; }
 
