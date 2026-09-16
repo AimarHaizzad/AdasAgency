@@ -1,5 +1,28 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+const navToggle = document.getElementById('nav-toggle');
+const primaryNav = document.getElementById('primary-nav');
+
+function closeNav() {
+  primaryNav.classList.remove('is-open');
+  navToggle.setAttribute('aria-expanded', 'false');
+}
+
+navToggle.addEventListener('click', function () {
+  const isOpen = primaryNav.classList.toggle('is-open');
+  navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+});
+
+primaryNav.querySelectorAll('a').forEach(function (link) {
+  link.addEventListener('click', closeNav);
+});
+
+document.addEventListener('click', function (e) {
+  if (!primaryNav.classList.contains('is-open')) return;
+  if (primaryNav.contains(e.target) || navToggle.contains(e.target)) return;
+  closeNav();
+});
+
 const WHATSAPP_NUMBER = '60189692946';
 
 const form = document.getElementById('quotation-form');
