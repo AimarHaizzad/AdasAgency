@@ -175,8 +175,9 @@ p { margin: 0 0 12px; color: var(--muted); }
   font-size: clamp(1.6rem, 3.2vw, 2.15rem);
   margin-bottom: 12px;
   color: #fff;
+  text-align: justify;
 }
-.hero-sub { font-size: 0.95rem; max-width: 560px; color: rgba(255, 255, 255, 0.85); }
+.hero-sub { font-size: 0.95rem; max-width: 560px; color: rgba(255, 255, 255, 0.85); text-align: justify; }
 .hero-sub-compact { display: none; }
 .hero-actions {
   display: flex;
