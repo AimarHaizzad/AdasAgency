@@ -24,9 +24,11 @@ document.addEventListener('click', function (e) {
 });
 
 (function () {
-  const track = document.querySelector('.testimonial-grid');
+  const track = document.getElementById('testimonial-track');
   const dotsWrap = document.getElementById('testimonial-dots');
-  if (!track || !dotsWrap) return;
+  const prevBtn = document.getElementById('testimonial-prev');
+  const nextBtn = document.getElementById('testimonial-next');
+  if (!track || !dotsWrap || !prevBtn || !nextBtn) return;
 
   const cards = Array.from(track.children);
   if (cards.length === 0) return;
@@ -58,15 +60,39 @@ document.addEventListener('click', function (e) {
     dots.forEach(function (d, i) { d.classList.toggle('is-active', i === closestIndex); });
   }
 
+  function updateArrows() {
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    prevBtn.disabled = track.scrollLeft <= 4;
+    nextBtn.disabled = maxScroll <= 4 || track.scrollLeft >= maxScroll - 4;
+  }
+
+  function scrollByCard(direction) {
+    const gapStr = getComputedStyle(track).columnGap || getComputedStyle(track).gap || '20';
+    const gap = parseFloat(gapStr) || 20;
+    const amount = (cards[0].getBoundingClientRect().width + gap) * direction;
+    track.scrollBy({ left: amount, behavior: 'smooth' });
+  }
+
+  prevBtn.addEventListener('click', function () { scrollByCard(-1); });
+  nextBtn.addEventListener('click', function () { scrollByCard(1); });
+
   let ticking = false;
   track.addEventListener('scroll', function () {
     if (ticking) return;
     ticking = true;
-    requestAnimationFrame(function () { updateActiveDot(); ticking = false; });
+    requestAnimationFrame(function () {
+      updateActiveDot();
+      updateArrows();
+      ticking = false;
+    });
   });
 
-  window.addEventListener('resize', updateActiveDot);
+  window.addEventListener('resize', function () {
+    updateActiveDot();
+    updateArrows();
+  });
   updateActiveDot();
+  updateArrows();
 })();
 
 const WHATSAPP_NUMBER = '60189692946';

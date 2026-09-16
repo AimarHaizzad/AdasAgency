@@ -212,27 +212,35 @@
     <div class="container">
       <h2>Testimoni Pelanggan</h2>
       <p class="section-sub">Bukti sebenar quotation &amp; renewal yang telah kami uruskan.</p>
-      <div class="testimonial-grid">
-        <figure class="testimonial-card">
-          <img class="testimonial-photo" src="assets/testimonials/testimoni-1.jpg" alt="Serahan roadtax kepada pelanggan"
-               onerror="this.onerror=null;this.src='assets/testimonials/placeholder.svg';this.classList.add('placeholder')">
-          <figcaption>Serahan Roadtax</figcaption>
-        </figure>
-        <figure class="testimonial-card">
-          <img class="testimonial-photo" src="assets/testimonials/testimoni-2.jpg" alt="Quotation insurans motosikal"
-               onerror="this.onerror=null;this.src='assets/testimonials/placeholder.svg';this.classList.add('placeholder')">
-          <figcaption>Insurans Motosikal</figcaption>
-        </figure>
-        <figure class="testimonial-card">
-          <img class="testimonial-photo" src="assets/testimonials/testimoni-3.jpg" alt="Quotation insurans kereta"
-               onerror="this.onerror=null;this.src='assets/testimonials/placeholder.svg';this.classList.add('placeholder')">
-          <figcaption>Insurans Kereta</figcaption>
-        </figure>
-        <figure class="testimonial-card">
-          <img class="testimonial-photo" src="assets/testimonials/testimoni-4.jpg" alt="Renewal roadtax pelanggan kami"
-               onerror="this.onerror=null;this.src='assets/testimonials/placeholder.svg';this.classList.add('placeholder')">
-          <figcaption>Renewal Pelanggan Kami</figcaption>
-        </figure>
+      <div class="testimonial-carousel">
+        <button type="button" class="carousel-arrow carousel-arrow-prev" id="testimonial-prev" aria-label="Testimoni sebelumnya">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="testimonial-grid" id="testimonial-track" tabindex="0" role="region" aria-label="Testimoni pelanggan, tatal untuk lihat lagi">
+          <figure class="testimonial-card">
+            <img class="testimonial-photo" src="assets/testimonials/testimoni-1.jpg" alt="Serahan roadtax kepada pelanggan"
+                 onerror="this.onerror=null;this.src='assets/testimonials/placeholder.svg';this.classList.add('placeholder')">
+            <figcaption>Serahan Roadtax</figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <img class="testimonial-photo" src="assets/testimonials/testimoni-2.jpg" alt="Quotation insurans motosikal"
+                 onerror="this.onerror=null;this.src='assets/testimonials/placeholder.svg';this.classList.add('placeholder')">
+            <figcaption>Insurans Motosikal</figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <img class="testimonial-photo" src="assets/testimonials/testimoni-3.jpg" alt="Quotation insurans kereta"
+                 onerror="this.onerror=null;this.src='assets/testimonials/placeholder.svg';this.classList.add('placeholder')">
+            <figcaption>Insurans Kereta</figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <img class="testimonial-photo" src="assets/testimonials/testimoni-4.jpg" alt="Renewal roadtax pelanggan kami"
+                 onerror="this.onerror=null;this.src='assets/testimonials/placeholder.svg';this.classList.add('placeholder')">
+            <figcaption>Renewal Pelanggan Kami</figcaption>
+          </figure>
+        </div>
+        <button type="button" class="carousel-arrow carousel-arrow-next" id="testimonial-next" aria-label="Testimoni seterusnya">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
       </div>
       <div class="testimonial-dots" id="testimonial-dots" role="tablist" aria-label="Navigasi testimoni"></div>
     </div>
