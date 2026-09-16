@@ -23,6 +23,52 @@ document.addEventListener('click', function (e) {
   closeNav();
 });
 
+(function () {
+  const track = document.querySelector('.testimonial-grid');
+  const dotsWrap = document.getElementById('testimonial-dots');
+  if (!track || !dotsWrap) return;
+
+  const cards = Array.from(track.children);
+  if (cards.length === 0) return;
+
+  cards.forEach(function (card, i) {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'testimonial-dot';
+    dot.setAttribute('role', 'tab');
+    dot.setAttribute('aria-label', 'Pergi ke testimoni ' + (i + 1));
+    dot.addEventListener('click', function () {
+      card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    });
+    dotsWrap.appendChild(dot);
+  });
+  const dots = Array.from(dotsWrap.children);
+
+  function updateActiveDot() {
+    const trackRect = track.getBoundingClientRect();
+    const center = trackRect.left + trackRect.width / 2;
+    let closestIndex = 0;
+    let closestDist = Infinity;
+    cards.forEach(function (card, i) {
+      const r = card.getBoundingClientRect();
+      const cardCenter = r.left + r.width / 2;
+      const dist = Math.abs(cardCenter - center);
+      if (dist < closestDist) { closestDist = dist; closestIndex = i; }
+    });
+    dots.forEach(function (d, i) { d.classList.toggle('is-active', i === closestIndex); });
+  }
+
+  let ticking = false;
+  track.addEventListener('scroll', function () {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () { updateActiveDot(); ticking = false; });
+  });
+
+  window.addEventListener('resize', updateActiveDot);
+  updateActiveDot();
+})();
+
 const WHATSAPP_NUMBER = '60189692946';
 
 const form = document.getElementById('quotation-form');
