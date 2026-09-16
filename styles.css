@@ -256,23 +256,24 @@ p { margin: 0 0 12px; color: var(--muted); }
 .products h2, .products .section-sub { text-align: center; }
 .section-sub { max-width: 480px; margin: 0 auto 32px; }
 .section-sub-light { color: rgba(255, 255, 255, 0.75); }
-.product-grid {
+.services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
 }
-.product-card {
+.service-item {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 26px 22px;
+  padding: 24px 20px;
   box-shadow: var(--shadow);
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 14px;
 }
-.product-icon { font-size: 2rem; margin-bottom: 10px; }
-.product-card h3 { font-size: 1.1rem; }
-.product-card p { flex: 1; font-size: 0.92rem; }
+.service-icon { font-size: 1.7rem; flex-shrink: 0; }
+.service-item p { margin: 0; font-weight: 600; color: var(--text); font-size: 0.95rem; }
+.services-cta { text-align: center; margin-top: 32px; }
 
 /* Why */
 .why {
