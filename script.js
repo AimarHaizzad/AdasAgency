@@ -95,7 +95,7 @@ document.addEventListener('click', function (e) {
   updateArrows();
 })();
 
-const WHATSAPP_NUMBER = '60189692946';
+const WHATSAPP_NUMBER = '601167995758';
 
 const form = document.getElementById('quotation-form');
 
@@ -188,9 +188,10 @@ form.addEventListener('submit', function (e) {
   const textEl = wrap.querySelector('.location-status-text');
   if (!textEl) return;
 
-  const OPEN_MIN = 8 * 60 + 30;   // 8:30 AM
-  const CLOSE_MIN = 18 * 60;      // 6:00 PM
-  const OPEN_DAYS = [0, 3, 4, 5, 6]; // Rabu – Ahad
+  const OPEN_MIN = 9 * 60;        // 9:00 AM
+  const CLOSE_MIN = 16 * 60;      // 4:00 PM
+  const OPEN_DAYS = [0, 1, 2, 3, 4, 5, 6]; // Isnin – Ahad
+  const ONLINE_NOTE = ' · WhatsApp online 24 jam';
   const DAY_NAMES = ['Ahad', 'Isnin', 'Selasa', 'Rabu', 'Khamis', 'Jumaat', 'Sabtu'];
   const WEEKDAY_INDEX = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
 
@@ -243,14 +244,16 @@ form.addEventListener('submit', function (e) {
 
     if (isOpen) {
       textEl.appendChild(document.createTextNode('Buka Sekarang'));
-      textEl.appendChild(note(' · Tutup 6:00 PM'));
+      textEl.appendChild(note(' · Tutup 4:00 PM'));
+      textEl.appendChild(note(ONLINE_NOTE));
     } else {
-      textEl.appendChild(document.createTextNode('Tutup'));
+      textEl.appendChild(document.createTextNode('Pejabat Tutup'));
       if (isBusinessDay && now.minutes < OPEN_MIN) {
-        textEl.appendChild(note(' · Buka 8:30 AM hari ini'));
+        textEl.appendChild(note(' · Buka 9:00 AM hari ini'));
       } else {
-        textEl.appendChild(note(' · Buka semula ' + DAY_NAMES[nextOpenDay(now.day)] + ' 8:30 AM'));
+        textEl.appendChild(note(' · Buka semula ' + DAY_NAMES[nextOpenDay(now.day)] + ' 9:00 AM'));
       }
+      textEl.appendChild(note(ONLINE_NOTE));
     }
 
     wrap.hidden = false;
