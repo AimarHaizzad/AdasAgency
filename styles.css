@@ -173,10 +173,18 @@ p { margin: 0 0 12px; color: var(--muted); }
 }
 .hero h1 {
   font-size: clamp(1.6rem, 3.2vw, 2.15rem);
-  margin-bottom: 12px;
+  margin-bottom: 16px;
   color: #fff;
 }
-.hero-sub { font-size: 0.95rem; max-width: 560px; color: rgba(255, 255, 255, 0.85); text-align: justify; }
+.hero-sub { font-size: 0.95rem; max-width: 560px; color: rgba(255, 255, 255, 0.85); text-align: left; line-height: 1.55; }
+.hero-tagline {
+  display: block;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
+  color: #fff;
+  margin-bottom: 6px;
+}
 .hero-sub-compact { display: none; }
 .hero-actions {
   display: flex;
@@ -928,7 +936,7 @@ p { margin: 0 0 12px; color: var(--muted); }
 }
 .bnpl-logo[data-brand="shopee"] { --brand: #ee4d2d; }
 .bnpl-logo[data-brand="grab"]   { --brand: #00b14f; }
-.bnpl-logo[data-brand="apapay"] { --brand: #2b6cb0; }
+.bnpl-logo[data-brand="ahapay"] { --brand: #2b6cb0; }
 .bnpl-logo[data-brand="atome"]  { --brand: #f0466e; }
 .bnpl-rate {
   flex-shrink: 0;
